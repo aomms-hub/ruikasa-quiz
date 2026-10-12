@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personality Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="quiz-container">
+
+    <section id="start-screen">
+      <h1> รุยคาสะ AU ไหนที่ใช่คุณ</h1>
+      <p>ตอบคำถาม 12 ข้อ เพื่อค้นหาว่ารุยคาสะ AU ไหนเหมาะกับคุณที่สุด !</p>
+      <button id="start-btn">เริ่มทำแบบทดสอบ</button>
+    </section>
+
+    <section id="quiz-screen" hidden>
+      <p id="question-progress"></p>
+      <div class="progress-bar">
+        <div id="progress-fill"></div>
+      </div>
+
+      <h2 id="question-title"></h2>
+      <div id="choices-container"></div>
+
+      <div class="navigation">
+        <button id="back-btn">ย้อนกลับ</button>
+        <button id="next-btn" disabled>ถัดไป</button>
+      </div>
+    </section>
+
+    <section id="result-screen" hidden>
+      <h2>ผลลัพธ์ของคุณ</h2>
+      <h3 id="result-title"></h3>
+      <p id="result-description"></p>
+
+      <div id="score-details"></div>
+
+      <button id="restart-btn">ทำแบบทดสอบอีกครั้ง</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

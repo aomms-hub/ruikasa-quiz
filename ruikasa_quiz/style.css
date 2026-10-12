@@ -1,0 +1,119 @@
+
+/* พื้นฐาน */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #fff8f3;
+  color: #594b53;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.quiz-container {
+  width: 100%;
+  max-width: 640px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 24px;
+  box-shadow: 0 8px 30px #594b5310;
+}
+
+h1, h2, h3 {
+  color: #b87591;
+}
+
+button {
+  border: none;
+  border-radius: 14px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #f4dce7;
+  color: #594b53;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background: #edc9da;
+}
+
+/* ตัวเลือกคำตอบ */
+.choice {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin: 12px 0;
+  padding: 16px;
+  background: #fff8f3;
+  border: 2px solid transparent;
+}
+
+.choice.selected {
+  border-color: #d9a6bd;
+  background: #fdf0f5;
+}
+
+/* แถบความคืบหน้า */
+.progress-bar {
+  height: 8px;
+  background: #f2e8ec;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 16px 0 24px;
+}
+
+#progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #d9a6bd;
+  transition: width 0.2s;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* คะแนนแต่ละด้าน */
+.score-item {
+  margin: 16px 0;
+}
+
+.score-bar {
+  height: 8px;
+  background: #f2e8ec;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.score-fill {
+  height: 100%;
+  background: #c5b6e8;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+  .quiz-container {
+    padding: 22px;
+  }
+
+  .navigation button {
+    padding: 12px;
+  }
+}
